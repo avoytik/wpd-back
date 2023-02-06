@@ -1,0 +1,16 @@
+.idea
+
+parser/pages/*.csv
+node_modules/
+*.tsbuildinfo
+.npm
+.eslintcache
+.stylelintcache
+__pycache__/
+
+# dotenv environment variable files
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local

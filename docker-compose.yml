@@ -1,0 +1,25 @@
+version: '3.9'
+
+services:
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.17.8
+    ports:
+      - 127.0.0.1:9200:9200
+    env_file:
+      - .env
+    environment:
+      discovery.type: single-node
+      xpack.security.enabled: 'true'
+      ES_JAVA_OPTS: '-Xms256m -Xmx256m'
+      network.bind_host: 0.0.0.0
+      network.host: 0.0.0.0
+      bootstrap.memory_lock: 'true'
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - es-data:/usr/share/elasticsearch/data
+
+volumes:
+  es-data: {}

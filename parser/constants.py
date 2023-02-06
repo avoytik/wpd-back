@@ -1,0 +1,11 @@
+WIKIMEDIA_URL = 'https://dumps.wikimedia.org'
+DUMP_STATUS_URL = '/enwiki/20230120/dumpstatus.json'
+QUEUE_SIZE = 50
+MAX_THREADS = 3
+PAGES_PROGRESS_THRESHOLD = 100
+GET_EVENT_TIMEOUT = 1 * 30 # get events every 30 seconds
+GET_EVENT_MAX_RETRY = 5
+PAGE_INDEX_NAME= 'wikipedia_page'
+GEOLOCATION_INDEX_NAME= 'wikipedia_geo_locations'
+MAX_GEO_LOCATION_CALLS_PER_DAY = 10
+YMD_FORMAT = "%Y-%m-%d"
